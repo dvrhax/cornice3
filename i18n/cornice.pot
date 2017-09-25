@@ -1,0 +1,562 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: Fri May 16 17:45:02 2003\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.4\n"
+
+
+#: -:19 -:580
+msgid "Name"
+msgstr ""
+
+#: -:20
+msgid "Path"
+msgstr ""
+
+#: -:83
+msgid "Select the name for the bookmark"
+msgstr ""
+
+#: -:84
+msgid "Add Bookmark"
+msgstr ""
+
+#: -:91
+msgid "Error adding bookmark!"
+msgstr ""
+
+#: -:290
+msgid ""
+"Cornice v%s: a Python + wxPython + PIL image viewer\n"
+"Running on Python %s, wxPython %s and PIL %s\n"
+"Author: Alberto Griggio <agriggio@users.sourceforge.net>\n"
+"Thanks to: see credits.txt\n"
+"License: GPL (see license.txt)\n"
+"THIS PROGRAM COMES WITH NO WARRANTY"
+msgstr ""
+
+#: -:308
+msgid ""
+" SPACE or PG_DOWN:     Show next image\n"
+" BACKSPACE or PG_UP:   Show previous image\n"
+" HOME:                 Show first image\n"
+" END:                  Show last image\n"
+" LEFT_ARROW:           Scroll image left\n"
+" RIGHT_ARROW:          Scroll image right\n"
+" UP_ARROW:             Scroll image up\n"
+" DOWN_ARROW:           Scroll image down\n"
+" F:                    Fit image\n"
+" + or ]:               Zoom in\n"
+" - or [:               Zoom out\n"
+" 1:                    Restore original image size\n"
+" K:                    Remember zoom and rotation settings\n"
+" F5:                   Refresh image\n"
+" R:                    Rotate image 90 degrees clockwise\n"
+" L:                    Rotate image 90 degrees counterclockwise\n"
+" S:                    Start/Stop slideshow\n"
+" F11:                  Toggle fullscreen mode\n"
+" ESC:                  Close viewer frame"
+msgstr ""
+
+#: -:331
+msgid "Cornice Viewer Key Bindings"
+msgstr ""
+
+#: -:427
+msgid "Picture Browser - Cornice"
+msgstr ""
+
+#: -:433
+msgid "Tree"
+msgstr ""
+
+#: -:434
+msgid "Bookmarks"
+msgstr ""
+
+#: -:516
+msgid "Picture Viewer - Cornice"
+msgstr ""
+
+#: -:581
+msgid "Date"
+msgstr ""
+
+#: -:582
+msgid "Size"
+msgstr ""
+
+#: -:583
+msgid "Image Properties"
+msgstr ""
+
+#: -:813
+msgid "Total %s file(s), (%s)"
+msgstr ""
+
+#: -:821
+msgid "Delete (%s) item(s)?"
+msgstr ""
+
+#: -:822
+msgid "Are you sure?"
+msgstr ""
+
+#: -:1736 -:1760
+msgid "Error"
+msgstr ""
+
+#: -:1736 -:1760
+msgid "You must insert a valid path!"
+msgstr ""
+
+#: -:1852
+msgid "Unable to save bookmarks!"
+msgstr ""
+
+#: -:1899
+msgid "Unable to save preferences (%s)"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:7
+msgid "Preferences - Cornice"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:17
+msgid "Browser"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:35
+msgid "Initial path"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:53
+msgid "Name"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:54
+msgid "Date"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:55
+msgid "Size"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:56
+msgid "Type"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:61
+msgid "Sort images by"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:69
+msgid "Sort in reverse order"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:76
+msgid "Show hidden directories in the tree"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:84
+msgid "Details"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:85
+msgid "Thumbnails"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:90
+msgid "Default directory view"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:99
+msgid "Viewer"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:114
+msgid "Show images in fullscreen mode by default"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:121
+msgid "Fit images to window by default"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:132
+msgid "Default size of the viewer window"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:155
+msgid "Switch to fullscreen mode"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:163
+msgid "Fit images to window"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:174
+msgid "Delay between slides (in seconds)"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:197
+msgid "Advanced"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:215
+msgid "Adjust position of the fullscreen window"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:230
+msgid "Adjust size of the fullscreen window"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:248
+msgid "Nearest (Faster - Lower quality)"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:249
+msgid "Linear"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:250
+msgid "Cubic (Higher quality - Slower)"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:255
+msgid "Interpolation to use to resize images:"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:266
+msgid "Thumbnails cache size (in Kb)"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:294 /home/alb/python/Cornice/resources.xrc:512
+msgid "OK"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:301 /home/alb/python/Cornice/resources.xrc:520
+msgid "Cancel"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:310
+msgid "_File"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:312
+msgid "View"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:315
+msgid "Delete selection\tDel"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:318
+msgid "Up directory"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:322
+msgid "Preferences...\tCtrl+P"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:326
+msgid "E_xit\tCtrl+Q"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:330
+msgid "_View"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:332
+msgid "Details\tF3"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:336
+msgid "Thumbnails\tF4"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:341
+msgid "Tree\tAlt+T"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:344
+msgid "Bookmarks\tAlt+B"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:348
+msgid "Hidden dirs\tCtrl+H"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:352
+msgid "Refresh\tF5"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:356
+msgid "Sort"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:358
+msgid "By Name"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:362
+msgid "By Date"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:366
+msgid "By Size"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:370
+msgid "By Image Properties"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:375
+msgid "Reverse"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:381
+msgid "_Bookmarks"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:383
+msgid "Add bookmark\tCtrl+D"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:386
+msgid "Edit Bookmarks..."
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:390
+msgid "_Help"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:392
+msgid "Viewer keybindings\tF1"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:395
+msgid "About..."
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:402
+msgid "Bookmarks Editor - Cornice"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:427
+msgid "Bookmark"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:432
+msgid "Name:"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:445
+msgid "Path:"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:468
+msgid "Add"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:476
+msgid "Remove"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:488
+msgid "Move Up"
+msgstr ""
+
+#: /home/alb/python/Cornice/resources.xrc:496
+msgid "Move Down"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:9
+msgid "Up Direcrory"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:13
+msgid "View Image"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:23 /home/alb/python/Cornice/toolbars.xrc:104
+msgid "Refresh"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:29
+msgid "View Details"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:35
+msgid "View Thumbnails"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:45
+msgid "Exit Cornice"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:54
+msgid "First Image"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:59
+msgid "Previous Image"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:64
+msgid "Next Image"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:69
+msgid "Last Image"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:79
+msgid "Zoom Out"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:84
+msgid "Zoom In"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:89
+msgid "Default Zoom"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:93
+msgid "Fit Screen"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:109
+msgid "Rotate Left"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:114
+msgid "Rotate Right"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:123 /home/alb/python/Cornice/resources.xrc:149
+msgid "Slideshow"
+msgstr ""
+
+#: /home/alb/python/Cornice/toolbars.xrc:133
+msgid "Fullscreen"
+msgstr ""
+
+# manually added 2003-06-07
+msgid "Keep zoom and rotation settings"
+msgstr ""
+
+msgid "Remember zoom and rotation settings between images"
+msgstr ""
+
+msgid "Open ZIP archive\tCtrl+O"
+msgstr ""
+
+msgid "Open ZIP archive"
+msgstr ""
+
+msgid "Remember last visited path"
+msgstr ""
+
+msgid "Restart slideshow automatically"
+msgstr ""
+
+msgid "Show images in random order"
+msgstr ""
+
+msgid "Allow \"fit image\" to enlarge image"
+msgstr ""
+
+msgid "Changes will take effect next time you start Cornice"
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "Thumbnails size"
+msgstr ""
+
+msgid "Select ZIP archive to open"
+msgstr ""
+
+msgid "&Edit"
+msgstr ""
+
+msgid "Cut\tCtrl+X"
+msgstr ""
+
+msgid "Copy\tCtrl+C"
+msgstr ""
+
+msgid "Paste\tCtrl+V"
+msgstr ""
+
+msgid "The image already exists"
+msgstr ""
+
+msgid "Do you want to overwrite the image on the left with that on the right?"
+msgstr ""
+
+msgid "New image name"
+msgstr ""
+
+msgid "Rename"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Auto skip"
+msgstr ""
+
+msgid "Overwrite"
+msgstr ""
+
+msgid "Overwrite all"
+msgstr ""
+
+msgid "Can't paste on this path: %s"
+msgstr ""
+
+msgid "UNSUPPORTED FORMAT"
+msgstr ""
+
+msgid "Show icon on the system tray"
+msgstr ""
+
+msgid "Show/Hide"
+msgstr ""
+
+msgid "Minimize/Restore"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Use system file dialog (KDE only)"
+msgstr ""
+
+msgid "Background colour reflects image type"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Exif data"
+msgstr ""
+
+msgid "Value"
+msgstr ""

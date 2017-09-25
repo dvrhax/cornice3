@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<resource version="2.3.0.1">
+  <object class="wxToolBar" name="browser_toolbar">
+    <bitmapsize>24, 24</bitmapsize>
+    <style>wxTB_FLAT|wxTB_DOCKABLE|wxTB_HORIZONTAL</style>
+    <object class="tool" name="view">
+      <bitmap>view.xpm</bitmap>
+      <tooltip>View Image</tooltip>
+    </object>
+    <object class="tool" name="up_dir">
+      <bitmap>dir_up.xpm</bitmap>
+      <tooltip>Up Direcrory</tooltip>
+    </object>
+    <object class="tool" name="open_archive">
+      <bitmap>open_archive.xpm</bitmap>
+      <tooltip>Open ZIP archive</tooltip>
+    </object>
+    <object class="wxStaticLine">
+      <size>-1, 22</size>
+      <style>wxLI_VERTICAL</style>
+    </object>
+    <object class="tool" name="refresh">
+      <bitmap>refresh.xpm</bitmap>
+      <tooltip>Refresh</tooltip>
+    </object>
+    <object class="tool" name="report_view">
+      <bitmap>details.xpm</bitmap>
+      <toggle>1</toggle>
+      <tooltip>View Details</tooltip>
+    </object>
+    <object class="tool" name="thumbs_view">
+      <bitmap>thumbnails.xpm</bitmap>
+      <toggle>1</toggle>
+      <tooltip>View Thumbnails</tooltip>
+    </object>
+    <object class="wxStaticLine">
+      <size>-1, 22</size>
+      <style>wxLI_VERTICAL</style>
+    </object>
+    <object class="tool" name="exit">
+      <bitmap>exit.xpm</bitmap>
+      <tooltip>Exit Cornice</tooltip>
+    </object>
+  </object>
+  <object class="wxToolBar" name="viewer_toolbar">
+    <bitmapsize>24, 24</bitmapsize>
+    <style>wxTB_FLAT|wxTB_DOCKABLE|wxTB_HORIZONTAL</style>
+    <object class="tool" name="first_image">
+      <bitmap>first_image.xpm</bitmap>
+      <tooltip>First Image</tooltip>
+    </object>
+    <object class="tool" name="prev_image">
+      <bitmap>prev_image.xpm</bitmap>
+      <tooltip>Previous Image</tooltip>
+    </object>
+    <object class="tool" name="next_image">
+      <bitmap>next_image.xpm</bitmap>
+      <tooltip>Next Image</tooltip>
+    </object>
+    <object class="tool" name="last_image">
+      <bitmap>last_image.xpm</bitmap>
+      <tooltip>Last Image</tooltip>
+    </object>
+    <object class="wxStaticLine">
+      <size>-1, 22</size>
+      <style>wxLI_VERTICAL</style>
+    </object>
+    <object class="tool" name="zoom_out">
+      <bitmap>zoom_out.xpm</bitmap>
+      <tooltip>Zoom Out</tooltip>
+    </object>
+    <object class="tool" name="zoom_in">
+      <bitmap>zoom_in.xpm</bitmap>
+      <tooltip>Zoom In</tooltip>
+    </object>
+    <object class="tool" name="default_zoom">
+      <bitmap>default_zoom.xpm</bitmap>
+      <tooltip>Default Zoom</tooltip>
+    </object>
+    <object class="tool" name="fit_screen">
+      <bitmap>fit_screen.xpm</bitmap>
+      <tooltip>Fit Screen</tooltip>
+      <toggle>1</toggle>
+    </object>
+    <object class="tool" name="remember_settings">
+      <bitmap>remember_settings.xpm</bitmap>
+      <tooltip>Keep zoom and rotation settings</tooltip>
+      <toggle>1</toggle>
+    </object>
+    <object class="wxStaticLine">
+      <size>-1, 22</size>
+      <style>wxLI_VERTICAL</style>
+    </object>
+    <object class="tool" name="refresh_image">
+      <bitmap>refresh.xpm</bitmap>
+      <tooltip>Refresh</tooltip>
+    </object>
+    <object class="tool" name="rotate_left">
+      <bitmap>rotate_left.xpm</bitmap>
+      <tooltip>Rotate Left</tooltip>
+    </object>
+    <object class="tool" name="rotate_right">
+      <bitmap>rotate_right.xpm</bitmap>
+      <tooltip>Rotate Right</tooltip>
+    </object>
+    <object class="wxStaticLine">
+      <size>-1, 22</size>
+      <style>wxLI_VERTICAL</style>
+    </object>
+    <object class="tool" name="slideshow">
+      <bitmap>slideshow.xpm</bitmap>
+      <tooltip>Slideshow</tooltip>
+      <toggle>1</toggle>
+    </object>
+    <object class="wxStaticLine">
+      <size>-1, 22</size>
+      <style>wxLI_VERTICAL</style>
+    </object>
+    <object class="tool" name="full_screen">
+      <bitmap>full_screen.xpm</bitmap>
+      <tooltip>Fullscreen</tooltip>
+    </object>
+  </object>
+</resource>
