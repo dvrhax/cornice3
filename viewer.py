@@ -506,7 +506,7 @@ class CorniceViewer(wx.ScrolledWindow):
 
     def on_mouse_move(self, event):
         if event.LeftIsDown() and event.Dragging():
-            self.SetCursor(wx.StockCursor(wx.CURSOR_HAND))
+            self.Cursor(wx.StockCursor(wx.CURSOR_HAND))
             x, y = self._drag_start
             self._drag_start = xx, yy = event.GetPosition()
             px, py = self.GetScrollPixelsPerUnit()
