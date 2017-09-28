@@ -267,14 +267,12 @@ class PictureListCtrl(wx.ListCtrl, wxlist.ListCtrlAutoWidthMixin,
         def func(event):
             self.selected_item = event.GetIndex()
             handler(self.selected_item)
-        #wx.EVT_LIST_ITEM_SELECTED(self, self.GetId(), func)
         wx.EvtHandler.Bind(self, wx.EVT_LIST_ITEM_SELECTED, func, id=self.GetId())
 
     def bind_item_activated(self, handler):
         def func(event):
             self.selected_item = event.GetIndex()
             handler(self.selected_item)
-        #wx.EVT_LIST_ITEM_ACTIVATED(self, self.GetId(), func)
         wx.EvtHandler.Bind(self, wx.EVT_LIST_ITEM_ACTIVATED, func, id=self.GetId())
 
     def bind_key_down(self, handler):
@@ -283,19 +281,16 @@ class PictureListCtrl(wx.ListCtrl, wxlist.ListCtrlAutoWidthMixin,
             modifiers = [0, 0, 0] # listctrl events doesn't support modifiers
             handler(key, modifiers)
             #event.Skip()
-        #wx.EVT_LIST_KEY_DOWN(self, self.GetId(), func)
         wx.EvtHandler.Bind(self, wx.EVT_LIST_KEY_DOWN, func, id=self.GetId())
 
     def bind_begin_dragging(self, handler):
         def func(event):
             handler()
-        #wx.EVT_LIST_BEGIN_DRAG(self, self.GetId(), func)
         wx.EvtHandler.Bind(self, wx.EVT_LIST_BEGIN_DRAG, func, id=self.GetId())
 
     def bind_right_click(self, handler):
         def func(event):
             handler(event.GetPosition())
-        #wx.EVT_LIST_ITEM_RIGHT_CLICK(self, self.GetId(), func)
         wx.EvtHandler.Bind(self, wx.EVT_LIST_ITEM_RIGHT_CLICK, func, id=self.GetId())
 
 # end of class PictureListCtrl
@@ -356,7 +351,6 @@ class PictureList(wx.Panel):
             l.bind_key_down(self.on_char)
             l.bind_begin_dragging(self.on_dragging)
             l.bind_right_click(self.on_right_click)
-        #wx.EVT_TIMER(self, TIMER_ID, self.show_preview)
         wx.EvtHandler.Bind(self, wx.EVT_TIMER, self.show_preview, id=TIMER_ID)
 
         dircompleter.EVT_CHANGE_PATH(self, self.path_text.GetId(),

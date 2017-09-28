@@ -394,13 +394,15 @@ class AlbumsEditor:
         self.ctrl = ctrl
         res = wx.xrc.XmlResource.Get()
         self.dialog = res.LoadDialog(None, 'albums_editor')
-        wx.EVT_LIST_ITEM_SELECTED(self.dialog,
-                                  wx.xrc.XRCID('albums_list'),
-                                  self.on_item_selected)
-        wx.EVT_BUTTON(self.dialog, wx.xrc.XRCID('add'), self.add_item)
-        wx.EVT_BUTTON(self.dialog, wx.xrc.XRCID('remove'), self.remove_item)
-        wx.EVT_KILL_FOCUS(wx.xrc.XRCCTRL(self.dialog, 'name'),
-                          self.update_item)
+        
+        evts = (('albums_list', wx.EVT_LIST_ITEM_SELECTED, self.on_item_selected),
+                ('add', wx.EVT_BUTTON, self.add_item),
+                ('remove', wx.EVT_BUTTON, self.remove_item),
+                ('name', wx.EVT_KILL_FOCUS, self.update_item))
+
+        for idString, e, func in evts:
+            wx.EvtHandler.Bind(self.dialog, e, func, id=wx.xrc.XRCID(idString))
+
         list_ctrl = wx.xrc.XRCCTRL(self.dialog, 'albums_list')
         list_ctrl.InsertColumn(0, _('Name'))
         self.albumids = {}
@@ -416,7 +418,7 @@ class AlbumsEditor:
         list_ctrl.Freeze()
         list_ctrl.DeleteAllItems()
         for (albumid, name) in collection.get_albums():
-            item = list_ctrl.InsertStringItem(item+1, name)
+            item = list_ctrl.InsertItem(item+1, name)
             self.albumids[name] = albumid
         list_ctrl.SetColumnWidth(0, list_ctrl.GetClientSize()[0])
         list_ctrl.Thaw()

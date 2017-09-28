@@ -16,10 +16,12 @@ def main():
     slideshow = False
     path = None
     quickstart = False
+    random = False
 
     try:
-        options, args = getopt.getopt(sys.argv[1:], 'shq',
-                                      ['slideshow', 'help', 'quickstart'])
+        options, args = getopt.getopt(sys.argv[1:], 'shqr',
+                                      ['slideshow', 'help', 'quickstart', 'random'])
+
     except getopt.GetoptError:
         usage()
     for o, a in options:
@@ -29,6 +31,8 @@ def main():
             quickstart = True
         elif o in ('-h', '--help'):
             usage(False)
+        elif o in ('-r', 'random'):
+            random = True
 
     if args:
         path = os.path.abspath(os.path.expanduser(args[0]))
@@ -47,20 +51,21 @@ def main():
     else:
         import fixdc
         import main
-        main.main(path, slideshow, quickstart)
+        main.main(path, slideshow, quickstart, random)
 
 
 def usage(err=True):
     if err: stream = sys.stderr
     else: stream = sys.stdout
-    print >> stream, """Usage: %s [OPTIONS] [PATH]
+    print("""Usage: %s [OPTIONS] [PATH]
 Valid OPTIONS:
 -s, --slideshow:  starts a slideshow of the images in PATH (that must be given)
 -q, --quickstart: quick start mode
+-r, --random      set PATH to a random subdirectory of PATH
 -h, --help:       shows this message and exits
 
 If there are no options and PATH is given, shows the image at PATH\
-""" % os.path.basename(sys.argv[0])
+""" % os.path.basename(sys.argv[0]), file=stream)
     sys.exit(err)
 
 

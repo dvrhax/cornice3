@@ -125,22 +125,6 @@ class CorniceBrowser(wx.Frame):
         self.viewer.update_statusbar_info()
         
     def bind_menubar_events(self):
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('view'),
-                    ###lambda e: self.picture_list.on_item_activated())
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('exit'),
-                    ####lambda e: wx.CallAfter(wx.GetApp().ExitMainLoop))
-                    ###lambda e: wx.CallAfter(self.Close))
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('delete'),
-                    ###lambda e: self.picture_list.delete_selection())
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('refresh'),
-                    ###lambda e:self.picture_list.set_path(self.picture_list.path,
-                                                        ###True))
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('add_bookmark'),
-                    ###lambda e: self.bookmarks.add_bookmark())
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('edit_bookmarks'),
-                    ###lambda e: self.bookmarks.edit_bookmarks())
-        ###wx.EVT_MENU(self, wx.xrc.XRCID('about'),
-                    ###lambda e: resources.AboutDialog())
 
         def show_hidden(event):
             if event.IsChecked():
@@ -576,7 +560,7 @@ class Cornice(wx.App):
         #frame.SetPosition((0, 0)) # temporary, should be customizable
         
         if self.slideshow:
-            self.main_frame.set_path(path, False)
+            self.main_frame.set_path(self.path, False)###Changed path to self.path
             self.viewer_frame.Show()
             self.viewer.slideshow()
         elif self.path is not None and fileops.isfile(self.path):
@@ -628,7 +612,6 @@ class Cornice(wx.App):
         self._droptarget = clipboard.PathDropTarget(self)
         self.main_frame.SetDropTarget(self._droptarget)
         self.viewer_frame.SetDropTarget(self._droptarget)
-        ###wx.EVT_CLOSE(self.main_frame, common.exit_app)
         wx.EvtHandler.Bind(self.main_frame, wx.EVT_CLOSE, common.exit_app)
 
         self.SetTopWindow(self.main_frame)
@@ -741,9 +724,19 @@ class Cornice(wx.App):
 
 # end of class Cornice
 
-
-def main(path, slideshow, quickstart):
+def setRandom(path):
+    import random
+    randomList = []
+    for root, dirs, files in os.walk(path):
+        randomList.append(root)
+    return random.sample(randomList, 1)[0]
+    
+def main(path, slideshow, quickstart, random):
     os.chdir(os.path.abspath(os.path.dirname(sys.argv[0])))
+    
+    if random:
+        path = setRandom(path)
+
     app = Cornice(path, slideshow, quickstart)
 
     if wx.Platform != '__WXGTK__':

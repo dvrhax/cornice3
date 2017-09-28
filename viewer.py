@@ -71,19 +71,14 @@ class CorniceViewer(wx.ScrolledWindow):
         # timer to show slides
         SLIDESHOW_ID = wx.NewId()
         self.slideshow_timer = wx.Timer(self, SLIDESHOW_ID)        
-        #wx.EVT_TIMER(self, SLIDESHOW_ID, self._next_slide)
         wx.EvtHandler.Bind(self, wx.EVT_TIMER, self._next_slide, id=SLIDESHOW_ID)
         # timer to hide the mouse cursor in fullscreen mode
         HIDE_CURSOR_ID = wx.NewId()
         self.hide_cursor_timer = wx.Timer(self, HIDE_CURSOR_ID)
-        #wx.EVT_TIMER(self, HIDE_CURSOR_ID, self._hide_mouse_cursor)
         wx.EvtHandler.Bind(self, wx.EVT_TIMER, self._hide_mouse_cursor, id=HIDE_CURSOR_ID)
-        #wx.EVT_MOTION(self, self.on_mouse_move)
         wx.EvtHandler.Bind(self, wx.EVT_MOTION, self.on_mouse_move)
         self._drag_start = 0, 0
-        #wx.EVT_LEFT_DOWN(self, self.on_left_down)
         wx.EvtHandler.Bind(self, wx.EVT_LEFT_DOWN, self.on_left_down)
-        #wx.EVT_LEFT_UP(self, self.on_left_up)
         wx.EvtHandler.Bind(self, wx.EVT_LEFT_UP, self.on_left_up)
         
         def hide(event):
@@ -104,11 +99,7 @@ class CorniceViewer(wx.ScrolledWindow):
         evtList = ((wx.EVT_PAINT, self.on_paint),
                    (wx.EVT_SIZE, self.on_size),
                    (wx.EVT_CHAR, self.on_char))
-        #wx.EVT_CLOSE(parent, hide)
         wx.EvtHandler.Bind(parent, wx.EVT_CLOSE, hide)
-        #wx.EVT_PAINT(self, self.on_paint)
-        #wx.EVT_SIZE(self, self.on_size)
-        #wx.EVT_CHAR(self, self.on_char)
         for e in evtList:
             wx.EvtHandler.Bind(self, e[0], e[1])
         self._bind_toolbar_events()
@@ -116,9 +107,6 @@ class CorniceViewer(wx.ScrolledWindow):
 
     def _bind_toolbar_events(self):
         parent = self.GetParent()
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('first_image'),
-        ###            lambda e: self.view_first_image())
-        ###wx.EvtHandler.Bind(parent, wx.EVT_MENU, lambda e: self.view_first_image(), id=wx.xrc.XRCID('first_image'))
         evts = (('first_image', lambda e: self.view_first_image()),
                 ('prev_image', lambda e: self.view_prev_image()),
                 ('next_image', lambda e: self.view_next_image()),
@@ -136,33 +124,6 @@ class CorniceViewer(wx.ScrolledWindow):
 
         for ids, func in evts:
             wx.EvtHandler.Bind(parent, wx.EVT_MENU, func, id=wx.xrc.XRCID(ids))
-
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('prev_image'),
-        ###            lambda e: self.view_prev_image())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('next_image'),
-                    ###lambda e: self.view_next_image())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('last_image'),
-                    ###lambda e: self.view_last_image())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('zoom_out'),
-                    ###lambda e: self.zoom_out())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('zoom_in'),
-                    ###lambda e: self.zoom_in())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('fit_screen'),
-                    ###lambda e: self.fit_screen())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('rotate_left'),
-                    ###lambda e: self.rotate_left())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('rotate_right'),
-                    ###lambda e: self.rotate_right())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('full_screen'),
-                    ###lambda e: self.toggle_fullscreen())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('refresh_image'),
-                    ######lambda e: self.refresh_image())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('default_zoom'),
-                    ###lambda e: self.default_zoom())
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('slideshow'),
-                    ###self.slideshow)
-        ###wx.EVT_MENU(parent, wx.xrc.XRCID('remember_settings'),
-                    ###lambda e: self.toggle_remember_settings(False))
 
     def toggle_remember_settings(self, update_tool=True):
         self.keep_settings = not self.keep_settings
